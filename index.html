@@ -1,18 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Bypass AI Detection</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AI content bypass</title>
+    
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Original Text</h1>
-        <textarea id="before" placeholder="Enter text to bypass AI detection"></textarea><br>
-        <label><input type="checkbox" id="special-spaces"> Space Only</label><br>
-        <label><input type="checkbox" id="special-characters"> Character Only</label><br>
-        <button onclick="obfuscate()">Submit</button>
-        <textarea id="after" placeholder="Undetected text will appear here"></textarea>
+    <div class="main">
+        <h1 class="title_screen">AI Content Obfuscator</h1>
+        <div class="forms">
+            <div class="form">
+                <form class="start-form">
+                    Paste Essay / Stuff here 
+                    <br><textarea title="Top box" rows="5" cols="40" name="test" form="usrform" id="before">Enter text here...</textarea><br>
+                    <div class="checkbox-container">
+                        <label for="special-spaces">Special Spaces</label>
+                        <input type="checkbox" id="special-spaces" name="special-spaces" checked>
+                        <label for="special-characters">Special Characters</label>
+                        <input type="checkbox" id="special-characters" name="special-characters" checked>
+                    </div>
+                </form>
+                <form class="OUTPUT">
+                    OUTPUT 
+                    <br><textarea title="Bottom Box" rows="5" cols="40" name="test" form="usrform" id="after">The Output will be here</textarea><br>
+                </form>
+                <button class="button" onclick="obfuscate()" value="Obfuscate">Bypass</button>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
